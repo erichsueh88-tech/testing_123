@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>應用案例 | 榮富工業</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+    
+    body {
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      /* 重現圖片中由左下微黃/灰到右上淡藍灰的自然對角漸層 */
+      background: linear-gradient(135deg, #e3dfd6 0%, #d8dedd 40%, #cad7e4 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* 懸停漸變與底線效果 */
+    .case-link {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      text-decoration: none;
+    }
+
+    .case-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 4px;
+      background-color: #111827;
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .case-link:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="flex flex-col justify-between p-6 md:p-12 min-h-screen text-slate-900 selection:bg-rose-500 selection:text-white">
+
+  <!-- Top Navigation & Header -->
+  <header class="w-full flex flex-col md:flex-row items-center md:items-start justify-between relative mb-12 md:mb-20">
+    
+    <!-- 左上角 RF Logo -->
+    <div class="self-start md:self-auto mb-6 md:mb-0 transform hover:scale-105 transition-transform duration-300">
+      <a href="index.html" class="block bg-[#ba3843] p-2 sm:p-2.5 shadow-md hover:shadow-lg transition-shadow">
+        <svg class="w-16 h-16 sm:w-20 sm:h-20" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100" height="100" fill="#BA3843"/>
+          <path d="M 15 15 H 55 C 72 15 72 45 55 45 H 35 V 85 H 15 V 15 Z M 35 30 V 32 H 50 C 56 32 56 30 50 30 H 35 Z" fill="white"/>
+          <path d="M 42 43 L 68 85 H 88 L 60 43 Z" fill="white"/>
+          <path d="M 52 50 H 88 V 63 H 52 Z" fill="white"/>
+          <path d="M 52 15 H 88 V 28 H 52 Z" fill="white"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- 頁面主要標題：應用案例 -->
+    <div class="w-full text-center md:absolute md:left-1/2 md:-translate-x-1/2 md:top-2 pointer-events-none">
+      <h1 class="text-4xl md:text-6xl font-black text-slate-900 tracking-wider drop-shadow-sm">
+        應用案例
+      </h1>
+    </div>
+
+  </header>
+
+  <!-- Main Content Area / Case Links -->
+  <main class="w-full max-w-5xl mx-auto flex-1 flex flex-col justify-center my-8 md:my-16 pl-2 sm:pl-8 md:pl-16">
+    <div class="flex flex-col gap-8 md:gap-12 items-start">
+      
+      <!-- 案例一：貨櫃疊櫃3D模擬 (點擊直接跳轉) -->
+      <div class="group relative">
+        <a href="櫃裝載計算與 2D 視覺規劃系統確定版.html" class="case-link text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 hover:text-slate-700 tracking-wide text-left flex items-center gap-4">
+          <span>貨櫃疊櫃3D模擬</span>
+          <i class="fa-solid fa-arrow-right text-2xl opacity-0 group-hover:opacity-100 transition-opacity text-slate-700"></i>
+        </a>
+      </div>
+
+      <!-- 案例二：榮富工業_地端HTML介紹 (點擊直接跳轉) -->
+      <div class="group relative">
+        <a href="榮富工業_地端HTML流程實戰課程_最終修正版.html" class="case-link text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 hover:text-slate-700 tracking-wide text-left flex items-center gap-4">
+          <span>榮富工業_地端HTML介紹</span>
+          <i class="fa-solid fa-arrow-right text-2xl opacity-0 group-hover:opacity-100 transition-opacity text-slate-700"></i>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer Note -->
+  <footer class="w-full text-center text-xs md:text-sm text-slate-600 font-medium py-4">
+    <p>© 榮富工業 Rong Fu Industrial. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
